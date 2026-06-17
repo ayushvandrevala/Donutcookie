@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #050505;
+}
+
+/* Main hero section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: url("images/shinjuku-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark layer so the text is easier to read */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Characters */
+.character {
+  position: absolute;
+  bottom: 0;
+  max-height: 85vh;
+  z-index: 2;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.9));
+}
+
+.sukuna {
+  left: 3%;
+}
+
+.gojo {
+  right: 3%;
+}
+
+/* Center name area */
+.center-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.center-content h1 {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #ffffff, 0 0 30px #5b9dff;
+}
+
+.center-content p {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Projects section */
+.projects {
+  min-height: 50vh;
+  padding: 60px 20px;
+  text-align: center;
+  background: #0b0b0b;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Makes it work better on phones */
+@media (max-width: 800px) {
+  .character {
+    opacity: 0.45;
+    max-height: 70vh;
+  }
+
+  .sukuna {
+    left: -25%;
+  }
+
+  .gojo {
+    right: -25%;
+  }
+
+  .center-content {
+    width: 85%;
+  }
+}
