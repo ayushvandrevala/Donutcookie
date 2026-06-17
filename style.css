@@ -7,13 +7,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  background-color: #050505;
 }
 
-/* Main hero section */
+/* Full screen background */
 .hero {
+  height: 100vh;
+  width: 100%;
   position: relative;
-  min-height: 100vh;
   overflow: hidden;
 
   background-image: url("images/shinjuku-bg.jpg");
@@ -26,101 +26,73 @@ body {
   align-items: center;
 }
 
-/* Dark layer so the text is easier to read */
-.overlay {
+/* Makes background darker so name is readable */
+.dark-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
-/* Characters */
+/* Character images */
 .character {
   position: absolute;
   bottom: 0;
-  max-height: 85vh;
+  max-height: 90vh;
   z-index: 2;
-  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(0 0 25px black);
 }
 
+/* Sukuna on left */
 .sukuna {
-  left: 3%;
+  left: 40px;
 }
 
+/* Gojo on right */
 .gojo {
-  right: 3%;
+  right: 40px;
 }
 
-/* Center name area */
-.center-content {
+/* Name in center */
+.name-box {
   position: relative;
   z-index: 3;
   text-align: center;
-  padding: 30px;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-}
-
-.center-content h1 {
-  font-size: clamp(2.5rem, 7vw, 6rem);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-shadow: 0 0 15px #ffffff, 0 0 30px #5b9dff;
-}
-
-.center-content p {
-  margin-top: 10px;
-  font-size: 1.4rem;
-  color: #ddd;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  color: white;
-  text-decoration: none;
+  padding: 30px 50px;
+  background: rgba(0, 0, 0, 0.45);
   border: 2px solid white;
-  border-radius: 30px;
-  transition: 0.3s;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-.btn:hover {
-  background: white;
-  color: black;
+.name-box h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px white, 0 0 40px #4da6ff;
 }
 
-/* Projects section */
-.projects {
-  min-height: 50vh;
-  padding: 60px 20px;
-  text-align: center;
-  background: #0b0b0b;
+.name-box p {
+  margin-top: 10px;
+  font-size: 1.5rem;
 }
 
-.projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-/* Makes it work better on phones */
+/* Phone/tablet version */
 @media (max-width: 800px) {
   .character {
-    opacity: 0.45;
     max-height: 70vh;
+    opacity: 0.55;
   }
 
   .sukuna {
-    left: -25%;
+    left: -80px;
   }
 
   .gojo {
-    right: -25%;
+    right: -80px;
   }
 
-  .center-content {
-    width: 85%;
+  .name-box h1 {
+    font-size: 2.8rem;
   }
 }
