@@ -7,22 +7,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Ayush Vandrevala</a>
+    <nav class="site-nav">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <div class="hero">
-    <div class="dark-overlay"></div>
+  <main>
+    <section class="hero">
+      <div class="dark-overlay"></div>
 
-    <!-- Sukuna picture on the left -->
-    <img src="images/sukuna.png" alt="Sukuna from Jujutsu Kaisen" class="character sukuna">
+      <img src="sukuna.png" alt="Sukuna from Jujutsu Kaisen" class="character sukuna">
+      <img src="gojo.png" alt="Gojo from Jujutsu Kaisen" class="character gojo">
 
-    <!-- Gojo picture on the right -->
-    <img src="images/gojo.png" alt="Gojo from Jujutsu Kaisen" class="character gojo">
+      <div class="name-box">
+        <h1>Ayush Vandrevala</h1>
+        <p>Portfolio Website</p>
+        <div class="button-group">
+          <a href="projects.html" class="button">View Projects</a>
+          <a href="about.html" class="button button-secondary">About Me</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Your name in the middle -->
-    <div class="name-box">
-      <h1>Ayush Vandrevala</h1>
-      <p>Portfolio Website</p>
-    </div>
-  </div>
+    <section class="section intro">
+      <h2>Welcome</h2>
+      <p>Explore my work, skills, and what I build. Click through the navigation above to learn more about me and see featured projects.</p>
+    </section>
 
+    <section id="contact" class="section contact-section">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate or ask a question, reach out via email: <a href="mailto:ayush@example.com">ayush@example.com</a>.</p>
+    </section>
+  </main>
 </body>
 </html>
